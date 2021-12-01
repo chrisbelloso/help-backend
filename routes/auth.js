@@ -5,6 +5,7 @@ const bcrypt = require('bcrypt');
 const User = require('../models/User');
 const { generateJWT } = require('../helpers/generateJwt');
 
+
 router.post("/signup", async (req, res) => {
     const { email } = req.body;
     const testEmail = await User.findOne({email});
